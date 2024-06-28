@@ -164,7 +164,6 @@ private:
     boost::asio::streambuf buffer_;
 };
 
-// Servidor
 class server {
 public:
     server(boost::asio::io_context& io_context, short port)
@@ -186,7 +185,6 @@ private:
     tcp::acceptor acceptor_;
 };
 
-// Main
 int main(int argc, char* argv[]) {
     boost::asio::io_context io_context;
     server s(io_context, 9000);
